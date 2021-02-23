@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+<div class="container">
+
+  <header>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Let's Go add New Campground</h1>
+        <p>
+          <a href="/campgrounds" class="btn btn-info btn-md">Go Back!!</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="justify-content-center row">
+      <div class="col-md-8 col-sm-12">
+        <div class="card">
+          <div class="card-header">Add Campground</div>
+          <div class="card-body">
+            <form action="/campgrounds" method="post">
+              <div class="form-group">
+                <input type="text" class="form-control form-text" name="name" placeholder="Name of Campground" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control form-text" name="image" placeholder="Image Src" />
+              </div>
+              <div class="form-group">
+                <textarea rows="7" class="form-control form-text" name="description"
+                  placeholder="Description"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-success btn-sm">Add
+                  Campground</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<%- include('../partials/footer') %>

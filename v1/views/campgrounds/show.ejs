@@ -1,0 +1,51 @@
+<%- include("../partials/header"); %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="lead">
+                YelpCamp
+            </div>
+            <ui class="list-group">
+                <li class="list-group-item active">Info 1</li>
+                <li class="list-group-item">Info 2</li>
+                <li class="list-group-item">Info 3</li>
+            </ui>
+        </div>
+        <div class="col-md-9">
+            <div class="img-thumbnail">
+                <img class="img-fluid mb-2" style="width: 100%;" src="/<%= campground.image %>">
+                <caption style="padding: 9px;">
+                    <div class="float-right">
+                        <h4>$9.00/night</h4>
+                    </div>
+                    <h4><a><%= campground.name %></a></h4>
+                    <p><%= campground.description %></p>
+                </caption>
+            </div>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div class="text-right">
+                        <a href="<%= campground._id %>/comments/new" class="btn btn-primary btn-sm">Add
+                            comment</a>
+                        <hr>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <% campground.comments.forEach(function(comment){ %>
+                            <strong><%= comment.name %></strong>
+                            <span class="float-right">10 days ago</span>
+                            <p><%= comment.content %></p>
+                            <% }) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<%- include("../partials/footer"); %>
